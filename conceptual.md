@@ -9,7 +9,8 @@ Answer the following questions below:
 - Given a dictionary like ``{"a": 1, "b": 2}``: , list two ways you
   can try to get a missing key (like "c") *without* your programming
   crashing.
-	Using .get()
+	dict.get()
+	dict.getitem()
 
 
 - What is a unit test?
@@ -32,15 +33,17 @@ Answer the following questions below:
 
 
 - How do you collect data from a URL placeholder parameter using Flask?
-	@app.route('')
+	@app.route('/example/<name>')
+	def func(name):
+    	print(name)
 
 
 - How do you collect data from the query string using Flask?
-	request.args.get('param')
+	request.args['data']
 
 
 - How do you collect data from the body of the request using Flask?
-	request.data or request.form
+	request.json['data']
 
 
 - What is a cookie and what kinds of things are they commonly used for?
